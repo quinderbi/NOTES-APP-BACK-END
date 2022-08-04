@@ -10,12 +10,12 @@ const addNoteHandler = (request, h) => {
     const updatedAt = createdAt;
 
     const newNode = {
-        title,
-        tags,
-        body,
-        id,
-        createdAt,
-        updatedAt,
+        title: title,
+        tags: tags,
+        body: body,
+        id: id,
+        createdAt: createdAt,
+        updatedAt: updatedAt,
     };
 
     notes.push(newNode);
