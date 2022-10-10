@@ -144,4 +144,31 @@ const deleteNodeHandler = (request, h) => {
     }
 };
 
-module.exports = { addNoteHandler, getAllNodeHandler, getNodeHandler, updateNodeHandler, deleteNodeHandler };
+const getPostsHandler = (request, h) => {
+    const posts = [
+        {
+            id: 1,
+            title: "Post 1",
+            body: "Body 1",
+        },
+        {
+            id: 2,
+            title: "Post 2",
+            body: "Body 2",
+        },
+        {
+            id: 3,
+            title: "Post 3",
+            body: "Body 3",
+        },
+    ]
+
+    return response = h.response({
+        status: "success",
+        data: {
+            posts: posts,
+        },
+    });
+}
+
+module.exports = { getPostsHandler, addNoteHandler, getAllNodeHandler, getNodeHandler, updateNodeHandler, deleteNodeHandler };
